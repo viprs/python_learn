@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+"""
+download page: http://tungwaiyip.info/software/HTMLTestRunner.html
+"""
 import sys
+import time
 import unittest
+from HTMLTestRunner import HTMLTestRunner
 
 
 class TestMountain(unittest.TestCase):
@@ -14,8 +18,8 @@ class TestMountain(unittest.TestCase):
         pass
 
     def test_it_is_true(self):
-        #self.assertTrue(1 == 0)
-        self.assertTrue(1 != 0)
+        self.assertTrue(1 == 0)
+        #self.assertTrue(1 != 0)
 
     def test_it_is_false(self):
         self.assertFalse(1 == 0)
@@ -29,12 +33,19 @@ class TestMountain(unittest.TestCase):
         self.assertTrue("aaa   ".rstrip() == "aaa")
 
 
-def suite():
-    loader = unittest.TestLoader()
+def fun_suite():
     suite = unittest.TestSuite()
+    loader = unittest.TestLoader()
     suite.addTests(loader.loadTestsFromTestCase(TestMountain))
     return suite
 
 if __name__ == '__main__':
-    res = unittest.TextTestRunner(verbosity=2).run(suite())
+    #res = unittest.TextTestRunner(verbosity=2).run(fun_suite())
+
+    fp = open('./test_result_%s.html' % time.strftime("%Y-%m-%d %H-%M-%S"), 'wb')
+    runner = HTMLTestRunner(stream=fp,
+                            title='test report',
+                            description="test case run state:")
+    runner.run(fun_suite())
+    fp.close()
     sys.exit(0)
