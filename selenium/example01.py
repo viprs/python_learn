@@ -8,7 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-def test_filefox():
+def test_firefox():
     browser = webdriver.Firefox()
 
     browser.get('http://www.yahoo.com')
@@ -22,4 +22,4 @@ def test_filefox():
 
 
 if __name__ == '__main__':
-    test_filefox()
+    test_firefox()
