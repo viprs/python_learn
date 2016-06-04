@@ -44,8 +44,8 @@ if __name__ == '__main__':
 
     fp = open('./test_result_%s.html' % time.strftime("%Y-%m-%d %H-%M-%S"), 'wb')
     runner = HTMLTestRunner(stream=fp,
-                            title='test report',
-                            description="test case run state:")
+                            title='百度搜索测试报告',
+                            description="测试用例执行情况：")
     runner.run(fun_suite())
     fp.close()
     sys.exit(0)
