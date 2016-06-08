@@ -92,9 +92,6 @@ Version in 0.7.1
 # TODO: color stderr
 # TODO: simplify javascript using ,ore than 1 class in the class attribute?
 
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 import datetime
 import StringIO

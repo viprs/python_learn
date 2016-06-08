@@ -19,6 +19,8 @@ class Firefox(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url + "/")
         time.sleep(5)
+        print driver.get_window_size()
+        driver.maximize_window()
         second_url = 'http://news.baidu.com'
         print "now access %s" % second_url
         driver.get(second_url)
@@ -26,15 +28,17 @@ class Firefox(unittest.TestCase):
         # back to index.html
         print "back to %s" % self.base_url
         driver.back()
+        time.sleep(3)
 
         # forword to news page
         print "forword to %s" % second_url
         driver.forward()
+        time.sleep(3)
 
         # refresh page
         print "refresh page"
         driver.refresh()
-
+        time.sleep(3)
         
 
 if __name__ == "__main__":
