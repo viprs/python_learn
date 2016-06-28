@@ -3,7 +3,6 @@
 __author__ = 'Samren'
 import random
 
-
 def calc():
     print "please input the first number:"
     arg1 = int(raw_input())
