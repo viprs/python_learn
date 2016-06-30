@@ -1,11 +1,12 @@
 Python模拟面试
 ======
 
-Python里面如何实现tuple和list的转换？
-tuple转list
-tup1 = (1, 'a', 'b')
-list1 = list(tup1)
-同理，list转tuple
+- Python里面如何实现tuple和list的转换？
+
+	tuple转list
+	tup1 = (1, 'a', 'b')
+	list1 = list(tup1)
+	同理，list转tuple
 
 请写出一段Python代码实现删除一个list里面的重复元素
 
