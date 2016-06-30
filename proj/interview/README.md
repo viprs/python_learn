@@ -8,15 +8,21 @@ Python模拟面试
 	list1 = list(tup1)
 	同理，list转tuple
 
-请写出一段Python代码实现删除一个list里面的重复元素
+- 请写出一段Python代码实现删除一个list里面的重复元素
 
+	先强制转换成set，然后强制转换成list
 
-Python中pass语句的作用是什么？
+- Python中pass语句的作用是什么？
 
-如何知道一个python对象的类型？
-type isinstance
+	占位符
 
-如何进行数据类型的转换？
+- 如何知道一个python对象的类型？
+
+	type 比如type('1')，返回字符串
+
+	isinstance('1', basestring) 判断'1'是否basestring，返回True或False
+
+- 如何进行数据类型的转换？
 
 如何查看对象的标识符？
 
