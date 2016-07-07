@@ -1,0 +1,1 @@
+pyinstaller --noconsole --upx-dir . --workpath ./notepad/make/build  --distpath ./notepad/make/dist --specpath ./notepad/make -F -i ./notepad/icon/ws.ico notepad/notepad.py

@@ -1,2 +1,7 @@
 .idea/*
 *.pyc
+*.pyz
+*.toc
+*.pyd
+*.pkg
+*.exe
